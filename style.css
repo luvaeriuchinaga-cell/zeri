@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    background:radial-gradient(circle at top, #1c1f3d 0%, #0b0f1d 55%, #090b14 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    width: 600px;
+    height: 600px;
+   pointer-events: none;
+}
+.heart-group{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: heartfloat 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.heart-svg{
+    pointer-events: none;
+}
+
+.text-layer{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes heartfloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
+.text-shadow{
+    position: absolute;
+    color: #ff1493;
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight:bold;
+    transform:translate(-50%, -50%);
+    z-index: 1;
+    filter: blur(8px);
+    opacity: 0.6;
+
+   /* animation: fadeFloat 12s ease-in-out infinite;
+    pointer-events: none; */
+}
+.text{
+    position: absolute;
+    color:#ff69b4;
+    font-size: 16px;
+    white-space:nowrap;
+    font-weight: bold;
+    animation: float 12s ease-in-out infinite;
+    transform:translate(-50%, -50%);
+    z-index: 2;
+    filter: drop-shadow(0 0 10px #ff1493);
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform:translate(-50%, -50%) translateY(0);
+    }
+        50%{
+            transform:translate(-50%, -50%) translateY(-20px);
+        }
+    }
+.text{
+    position:absolute;
+    color: #ff1493;
+    font-size: 16px;
+    white-space: nowrap;
+    font-weight: bold;
+    animation: float 12s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    filter: drop-shadow(0 0 10px #ff1493) drop-shadow(0 0 35px rgba(255, 20, 147, 0.8));
+    pointer-events: none;
+}
+
+@keyframes float{
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(30px);
+    }
+    20% {
+        opacity:1;
+    }
+    80% {
+        opacity:1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-30px);
+    }
+}
+
+@keyframes fadeFloat{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    20% {
+        opacity:1;
+    }
+    80% {
+        opacity:1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}

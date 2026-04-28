@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>i love you</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container" id="heart">
+    <div class="heart-group">
+      <svg viewBox="0 0 600 600" class="heart-svg" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" style="width:100%; height:100%; position:absolute; inset:0;">
+        <defs>
+          <filter id="edgeBlur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          </filter>
+          <mask id="heartMask">
+            <rect x="0" y="0" width="600" height="600" fill="black" />
+            <path
+              d="M300,540 C300,540 48,348 48,204 C48,120 120,48 204,48 C252,48 300,84 300,132 C300,84 348,48 396,48 C480,48 552,120 552,204 C552,348 300,540 300,540 Z"
+              fill="white" filter="url(#edgeBlur)" />
+          </mask>
+        </defs>
+        <g mask="url(#heartMask)">
+          <image xlink:href="tel.png" href="tel.png" x="0" y="40" width="600" height="600"
+            preserveAspectRatio="xMidYMid slice" />
+        </g>
+      </svg>
+      <div id="heartTexts" class="text-layer"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
